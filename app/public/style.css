@@ -1,0 +1,28 @@
+.jumbotron {
+	background-color: #000000;
+	color: #ffffff;
+	height: 650px;
+	font-family: sans-serif, Times, Arial;
+}
+
+.header {
+	margin-top: 300px;
+}
+
+.btn-primary {
+	background-color: #05af46;
+	float: right;
+	border-radius: 0;
+}
+
+.title {
+	text-align: center;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.footer {
+	text-align: center;
+}
