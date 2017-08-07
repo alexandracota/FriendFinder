@@ -2,274 +2,210 @@
 <html>
 <head>
 	<meta charset="utf-8">
-
-	<title>FriendFinder Survey</title>
-	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
-
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<title>FriendFinder Survey</title>
 </head>
+
 <body>
+	<div class="container">
+		<!-- Back to home page button -->
+		<button type="button" class="btn btn-default home-btn" aria-label="Left Align"><a href="/home">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true">Back</span>
+		</a></button>
 
-<div class="container">
+		<div class="basic">
+			<h2 class="title">Survey Questions</h2>
+			<h3>Basic Info</h3>
+			<hr>
+			<div class="form-group">
+				<input type="text" class="form-control" id="name" placeholder="Your name">
+			</div>
+			<br>
+			<div class="input-group">
+				<span class="input-group-addon" id="basic addon3">http://</span>
+				<input type="text" class="form-control" id="link" placeholder="Link to photo image">
+			</div>
+		</div>
+		<br>
+		<br>
 
-	<button type="button" class="btn btn-default home-btn" aria-label="Left Align">
-	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true">Back</span>
+		<div class="questions">
+			<h4>Answer these questions with one of the answers below:</h4>
+			<h5>1 (Stongly Disagree)</h5>
+			<h5>2</h5>
+			<h5>3</h5>
+			<h5>4</h5>
+			<h5>5 (Strongly Agree)</h5>
+			<hr>
+		<div class="container question-list">
+			<div class="row">
+				<div class="col-md-6">
+					<p>1. You like dogs.</p>
+					<div class="form-group">
+						<input type="number" class="form-control user-answer" id="question-1" placeholder="1-5">
+					</div>
+					<p>2. Brunch is one of your hobbies.</p>
+					<div class="form-group">
+						<input type="number" class="form-control user-answer" id="question-2" placeholder="1-5">
+					</div>
+					<p>3. You live with your mom.</p>
+					<div class="form-group">
+						<input type="number" class="form-control user-answer" id="question-3" placeholder="1-5">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<p>4. You have goals.</p>
+					<div class="form-group">
+						<input type="number" class="form-control user-answer" id="question-4" placeholder="1-5">
+					</div>
+					<p>5. You like Mac n Cheese.</p>
+					<div class="form-group">
+						<input type="number" class="form-control user-answer" id="question-5" placeholder="1-5">
+					</div>
+					<p>6. Your dance moves are on point.</p>
+					<div class="form-group">
+						<input type="number" class="form-control user-answer" id="question-6" placeholder="1-5">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+			<br>
+			<br>
+
+	<!-- Submit Button -->
+	<!-- Form validation to make sure all fields are filled in before user can submit -->
+	<button type="button" class="btn btn-default btn-lg" id="submit-survey">
+		Submit
 	</button>
 
-	<div class="basic">
-		<h2 class="title">Survey Questions</h2>
-		<h3>Basic Info</h3>
-		<hr>
-		<div class="form-group">
-			<input type="text" class="form-control" placeholder="Your name">
-		</div>
-		<br>
-		<div class="input-group">
-			<span class="input-group-addon" id="basic addon3">http://</span>
-			<input type="text" class="form-control" placeholder="Link to photo image">
-		</div>
+		<!-- Pop up window with friend match result -->
+		<!-- Best Match -->
+		<!-- Name -->
+		<!-- Image -->
+		<!-- Close button -->
+	<p class="footer"><a href="../data/friends.js">API Frends List     |     </a><a href="https://github.com/alexandracota/FriendFinder">GitHub Repo</a></p>
 	</div>
-	<br>
-	<br>
 
-	<div class="questions">
-		<h3>Questions</h3>
-		<hr>
-		<div class="question-1">
-			<p>You like dogs</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<br>
-		<br>
 
-		<div class="question-2">
-			<p>Brunch is one of your hobbies</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
+<style>
+	.home-btn {
+	margin: 10px;
+	}
 
-	<br>
-	<br>
+	.jumbotron {
+		background-color: #000000;
+		color: #ffffff;
+		height: 650px;
+		font-family: sans-serif, Times, Arial;
+	}
 
-		<div class="question-3">
-			<p>You still live with your mom</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<br>
-		<br>
+	.header {
+		margin-top: 300px;
+	}
 
-		<div class="question-4">
-			<p>You have goals</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<br>
-		<br>
+	.btn-primary {
+		background-color: #05af46;
+		float: right;
+		border-radius: 0;
+	}
 
-		<div class="question-5">
-			<p>You like Macaroni and Cheese</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<br>
-		<br>
+	.title {
+		text-align: center;
+	}
 
-		<div class="question-6">
-			<p>Your dance moves are on point</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<br>
-		<br>
+	.question-list {
+		margin: 0 auto;
+	}
+
+	#submit-survey {
+		background-color: #05af46;
+		border-radius: 0;
+		margin-bottom: 20px;
+	}
+
+	.footer {
+		text-align: center;
+	}
+
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+	    	$(".dropdown-toggle").dropdown();
+		});
+		$()
+	//Need to post this array to friends.js.
+	
+
+	$("#submit-survey").on("click", function() {
+
+		//Grab values from each user input.
+		var answers = [
+			$("#question-1").val().trim(),
+			$("#question-2").val().trim(),
+			$("#question-3").val().trim(),
+			$("#question-4").val().trim(),
+			$("#question-5").val().trim(),
+			$("#question-6").val().trim()
+		]
+
+		//Array to store parsed answers.
+		var ansParsed = [];
+
+		//Object to hold all data for each new friend.
+		var newFriend = {
+			"name": $("#name").val().trim(),
+			"link": $("#link").val().trim(),
+			"answers": []
+		};
+
+		//Iterate through each answer to run parseInt.
+		function parse(parsedAns) {
+			for (var j=0; j<answers.length; j++) {
+			parsedAns = parseInt(answers[j]);
+			console.log(parsedAns);	
+			ansParsed.push(parsedAns);		
+			};
+		}
+
+		//Push parsed answers into the newFriend object.
+		console.log(ansParsed);
+		newFriend["answers"] = ansParsed;
 		
-		<div class="question-7">
-			<p>You think Java is short for JavaScript</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<br>
-		<br>
-
-		<div class="question-8">
-			<p>You are a motivated individual</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<br>
-		<br>
-		
-		<div class="question-9">
-			<p>You travel often</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-		<br>
-		<br>
-		
-		<div class="question-10">
-			<p>You consider yourself adventurous</p>
-			<div class="dropdown">
-				<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				Dropdown
-				<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				<li><a href="#">1 (Strongly Disagree)</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5 (Strongly Agree)</a></li>
-				<!-- <li role="separator" class="divider"></li>
-				<li><a href="#">Separated link</a></li> -->
-				</ul>
-			</div>
-		</div>
-	</div>
-	<br>
-	<br>
-
-<!-- Submit Button -->
-<!-- Form validation to make sure all fields are filled in before user can submit -->
-<button type="button" class="btn btn-default btn-lg" id="submit-survey">
-	Submit
-</button>
-
-	<!-- Pop up window with friend match result -->
-	<!-- Best Match -->
-	<!-- Name -->
-	<!-- Image -->
-	<!-- Close button -->
-<p class="footer"><a href="#">API Frends List     |     </a><a href="#">GitHub Repo</a></p>
-</div>
 
 
 
 
-<script type="text/javascript">
-	$(document).ready(function() {
-    $(".dropdown-toggle").dropdown();
-});
-</script>
+
+		var currentURL = window.location.origin;
+		console.log(currentURL + "/api/friends")
+		var newFriend = $.post((currentURL + "/api/friends"), newFriend, function(err, data) {
+			console.log('POSTING POSTING');
+			if (err) {
+				console.log(err);
+			} else {
+			console.log("You have been added to the friends list!");
+			$("#name").val("");
+			$("#link").val("");
+			$("#question-1").val("");
+			$("#question-2").val("");
+			$("#question-3").val("");
+			$("#question-4").val("");
+			$("#question-5").val("");
+			$("#question-6").val("");
+			}
+		});
+
+
+	});
+	
+
+	</script>
 
 </body>
 </html>

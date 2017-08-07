@@ -23,8 +23,8 @@
 	text-align: center;
 }
 
-.dropdown {
-	position: relative;
+.question-list {
+	margin: 0 auto;
 }
 
 #submit-survey {
